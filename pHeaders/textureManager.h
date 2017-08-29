@@ -22,12 +22,11 @@ class TextureManager
         TextureManager();
         void load(std::string id, const char *filename);
         void draw(int x, int y, int w, int h, int row, int col,
-                  std::string id, SDL_RendererFlip flip);
+            std::string id, SDL_RendererFlip flip);
+        void drawText(int x, int y, SDL_Color c, int size,
+            std::string font_loc, char* text);
         void render();
-        /*
-        void drawText(int x_loc, int y_loc, SDL_Color color, TTF_Font* font,
-                      char* text);
-        */
+
     private:
         SDL_Window *m_window;
         SDL_Renderer *m_renderer;

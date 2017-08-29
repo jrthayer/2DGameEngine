@@ -13,7 +13,7 @@ class InputManager
 {
     public:
         void update();
-        void isKeyDown();
+        bool isKeyDown(SDL_Scancode key);
 
     private:
         const Uint8* m_keystates = 0;

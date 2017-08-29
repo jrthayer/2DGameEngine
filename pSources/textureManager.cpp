@@ -8,6 +8,7 @@ DESCRIPTION
 TextureManager::TextureManager()
 {
     SDL_Init(SDL_INIT_EVERYTHING);
+    TTF_Init();
     m_window = SDL_CreateWindow("title", 50, 50, 1000, 500, SDL_WINDOW_SHOWN);
     m_renderer = SDL_CreateRenderer(m_window, -1, SDL_RENDERER_ACCELERATED);
     SDL_SetRenderDrawColor(m_renderer, 0, 0, 0, 0);
@@ -19,7 +20,7 @@ TextureManager::TextureManager()
         SDL_ClearError();
     }
 
-    load("error", "textures/textureLoadError.png");
+    load("error", "assets/textureLoadError.png");
 }
 
 /*
@@ -76,6 +77,38 @@ void TextureManager::draw(int x, int y, int w, int h, int row, int col,
                      0, flip);
 }
 
+/*
+DESCRIPTION
+    This function draws text with provided font style
+===================================================================
+INPUTS:
+    int x            = x location of texture inside the window
+    int y            = y location of texture inside the window
+    SDL_Color c      = color of the text in SDL format
+    TTF_Font* f      = true type font used for this text
+    char* text       = characters being displayed
+===================================================================
+*/
+void TextureManager::drawText(int x, int y, SDL_Color c, int size,
+    std::string font_loc, char* text)
+{
+    TTF_Font* f = TTF_OpenFont(font_loc.c_str(), size);
+    SDL_Surface* message_surface = TTF_RenderText_Solid(f, text, c);
+	SDL_Texture* message_texture = SDL_CreateTextureFromSurface(m_renderer,
+        message_surface);
+
+    SDL_Rect dest_rect;
+    dest_rect.x = x;
+	dest_rect.y = y;
+
+	TTF_SizeText(f, text, &dest_rect.w, &dest_rect.h);
+
+	SDL_RenderCopy(m_renderer, message_texture, NULL, &dest_rect);
+	SDL_FreeSurface(message_surface);
+	SDL_DestroyTexture(message_texture);
+	TTF_CloseFont(f);
+}
+
 
 /*
 DESCRIPTION
@@ -85,7 +118,6 @@ DESCRIPTION
 */
 void TextureManager::render()
 {
-    //draw("error", 50, 50, 100, 100, 0, 0, SDL_FLIP_NONE);
     SDL_RenderPresent(m_renderer);
     SDL_RenderClear(m_renderer);
 }

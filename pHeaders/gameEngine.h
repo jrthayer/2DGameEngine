@@ -2,6 +2,7 @@
 #define GAMEENGINE_H
 
 #include "textureManager.h"
+#include "inputManager.h"
 #include "gameObject.h"
 
 #include <vector>
@@ -20,5 +21,7 @@ class GameEngine
     private:
         bool m_running;
         std::vector<GameObject*> m_g_objects;
+        TextureManager m_t_manager;
+        InputManager m_i_manager;
 };
 #endif // GAMEENGINE_H

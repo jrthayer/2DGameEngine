@@ -5,26 +5,33 @@ DESCRIPTION
     Initializes member variables
 ===================================================================
 */
-GameObject::GameObject(int x, int y, int w, int h, int row, int col, std::string id)
-    : m_x(x), m_y(x), m_w(w), m_h(h), m_row(row), m_col(col), m_id(id)
+GameObject::GameObject(int x, int y)
+    : m_x(x), m_y(x)
 {
 
 }
 
 /*
 DESCRIPTION
-    Uses a TextureManager to draw itself to the screen
+    Runs the function passed in through setUpdate
+===================================================================
+*/
+void GameObject::update(GameObject *g, InputManager &i_manager)
+{
+    if(m_update != NULL)
+        m_update(*g, i_manager);
+}
+
+/*
+DESCRIPTION
+    Sets local function to function past in from user, this allows
+    for user defined behavior to be programmed into the class
 ===================================================================
 INPUTS:
-    TextureManager &t_manager = pass by reference the TextureManager
-                                that will draw the GameObject
+    void(*func)() = function pointer to function defined by user
 ===================================================================
-NOTE: needs to be pass by reference since we need the game's
-      TextureManager to draw the gameObject to the SDL renderer
-      connected to the game window
 */
-void GameObject::draw(TextureManager &t_manager)
+void GameObject::setUpdate(void(*func)(const GameObject&, InputManager &i_manager))
 {
-    //flip option included for future feature, none by default
-    t_manager.draw(m_x, m_y, m_w, m_h, m_row, m_col, m_id, SDL_FLIP_NONE);
+    m_update = func;
 }

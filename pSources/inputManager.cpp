@@ -50,8 +50,11 @@ DESCRIPTION
 INPUTS:
     SDL_Scancode key = key who's state is checked
 ===================================================================
+OUTPUTS:
+    Returns True if the key is currently down
+===================================================================
 */
-void InputManager::isKeyDown(SDL_Scancode key)
+bool InputManager::isKeyDown(SDL_Scancode key)
 {
     if(m_keystates != 0)
     {

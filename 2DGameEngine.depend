@@ -332,16 +332,22 @@
 
 1503794744 source:c:\users\james\desktop\2dgameengine\project sources\main.cpp
 
-1503993794 source:c:\users\james\desktop\2dgameengine\psources\gameengine.cpp
+1504014307 source:c:\users\james\desktop\2dgameengine\psources\gameengine.cpp
 	"gameEngine.h"
 
-1503993566 c:\users\james\desktop\2dgameengine\pheaders\gameengine.h
+1504014121 c:\users\james\desktop\2dgameengine\pheaders\gameengine.h
 	"textureManager.h"
+	"inputManager.h"
 	"gameObject.h"
 	<vector>
 
-1503879449 source:c:\users\james\desktop\2dgameengine\psources\main.cpp
+1504010244 source:c:\users\james\desktop\2dgameengine\psources\main.cpp
 	"gameEngine.h"
+	"gameObject.h"
+	"gameMob.h"
+	"gameUI.h"
+	<vector>
+	<string>
 
 1476939494 c:\users\james\desktop\2dgameengine\sdl2\include\sdl.h
 	"SDL_main.h"
@@ -668,10 +674,10 @@
 	"begin_code.h"
 	"close_code.h"
 
-1503977539 source:c:\users\james\desktop\2dgameengine\psources\texturemanager.cpp
+1504009552 source:c:\users\james\desktop\2dgameengine\psources\texturemanager.cpp
 	"textureManager.h"
 
-1503977561 c:\users\james\desktop\2dgameengine\pheaders\texturemanager.h
+1504008855 c:\users\james\desktop\2dgameengine\pheaders\texturemanager.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -684,11 +690,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1503974086 c:\users\james\desktop\2dgameengine\pheaders\gameobject.h
+1504014326 c:\users\james\desktop\2dgameengine\pheaders\gameobject.h
 	"textureManager.h"
+	"inputManager.h"
 	<string>
 
-1503970664 source:c:\users\james\desktop\2dgameengine\psources\gameobject.cpp
+1504011812 source:c:\users\james\desktop\2dgameengine\psources\gameobject.cpp
 	"gameObject.h"
 
 1503984295 c:\users\james\desktop\2dgameengine\pheaders\gamestate.h
@@ -698,4 +705,26 @@
 
 1503982614 source:c:\users\james\desktop\2dgameengine\psources\gamestate.cpp
 	"gameState.h"
+
+1504003235 source:c:\users\james\desktop\2dgameengine\psources\gameobjects\gamemob.cpp
+	"gameMob.h"
+
+1504003261 c:\users\james\desktop\2dgameengine\pheaders\gameobjects\gamemob.h
+	"gameObject.h"
+	<string>
+
+1504001035 source:c:\users\james\desktop\2dgameengine\psources\inputmanager.cpp
+	"inputManager.h"
+
+1504001004 c:\users\james\desktop\2dgameengine\pheaders\inputmanager.h
+	<SDL.h>
+
+1504009200 source:c:\users\james\desktop\2dgameengine\psources\gameobjects\gameui.cpp
+	"gameUI.h"
+
+1504009175 c:\users\james\desktop\2dgameengine\pheaders\gameobjects\gameui.h
+	"gameObject.h"
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
 
