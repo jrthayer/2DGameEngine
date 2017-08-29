@@ -332,11 +332,12 @@
 
 1503794744 source:c:\users\james\desktop\2dgameengine\project sources\main.cpp
 
-1503902386 source:c:\users\james\desktop\2dgameengine\psources\gameengine.cpp
+1503970440 source:c:\users\james\desktop\2dgameengine\psources\gameengine.cpp
 	"gameEngine.h"
 
-1503902517 c:\users\james\desktop\2dgameengine\pheaders\gameengine.h
+1503970323 c:\users\james\desktop\2dgameengine\pheaders\gameengine.h
 	"textureManager.h"
+	"gameObject.h"
 
 1503879449 source:c:\users\james\desktop\2dgameengine\psources\main.cpp
 	"gameEngine.h"
@@ -666,10 +667,10 @@
 	"begin_code.h"
 	"close_code.h"
 
-1503901765 source:c:\users\james\desktop\2dgameengine\psources\texturemanager.cpp
+1503970539 source:c:\users\james\desktop\2dgameengine\psources\texturemanager.cpp
 	"textureManager.h"
 
-1503904400 c:\users\james\desktop\2dgameengine\pheaders\texturemanager.h
+1503967540 c:\users\james\desktop\2dgameengine\pheaders\texturemanager.h
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -681,4 +682,11 @@
 	"SDL.h"
 	"begin_code.h"
 	"close_code.h"
+
+1503970646 c:\users\james\desktop\2dgameengine\pheaders\gameobject.h
+	"textureManager.h"
+	<string>
+
+1503968575 source:c:\users\james\desktop\2dgameengine\psources\gameobject.cpp
+	"gameObject.h"
 

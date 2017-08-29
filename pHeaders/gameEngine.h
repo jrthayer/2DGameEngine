@@ -2,6 +2,7 @@
 #define GAMEENGINE_H
 
 #include "textureManager.h"
+#include "gameObject.h"
 
 class GameEngine
 {

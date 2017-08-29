@@ -58,16 +58,16 @@ INPUTS:
     SDL_RendererFlip = is the image flipped in any direction
 ===================================================================
 */
-void TextureManager::draw(std::string id, int w, int h, int x, int y,
-                  int col, int row, SDL_RendererFlip flip)
+void TextureManager::draw(int x, int y, int w, int h, int row, int col,
+                          std::string id, SDL_RendererFlip flip)
 {
     SDL_Rect src_rect;
     SDL_Rect dest_rect;
 
     dest_rect.x = x;
     dest_rect.y = y;
-    dest_rect.w = w;
-    dest_rect.h = h;
+    dest_rect.w = src_rect.w = w;
+    dest_rect.h = src_rect.h = h;
 
     src_rect.x = col*w;
     src_rect.y = h*row;
