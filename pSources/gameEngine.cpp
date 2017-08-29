@@ -13,7 +13,7 @@ void GameEngine::run()
     while(m_running)
     {
         update();
-        draw();
+        draw(m_t_manager);
     }
 
     close();
@@ -38,7 +38,7 @@ void GameEngine::update()
     }
 }
 
-void GameEngine::draw()
+void GameEngine::draw(TextureManager t_manager)
 {
     std::vector<GameObject*>::iterator iter;
 
@@ -48,7 +48,15 @@ void GameEngine::draw()
     }
 }
 
-void GameEngine::addGameState(GameState* g_object)
+void GameEngine::addGameObject(GameObject* g_object)
 {
     m_g_objects.push_back(g_object);
+}
+
+bool GameEngine::winCondition(bool(*func)(std::vector<GameObject*>*))
+{
+    if(func(&m_g_objects) == true)
+        return true;
+    else
+        return false;
 }

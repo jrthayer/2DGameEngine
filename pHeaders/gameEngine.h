@@ -13,8 +13,9 @@ class GameEngine
         void run();
         void close();
         void update();
-        void draw();
-        void addGameObject();
+        void draw(TextureManager t_mangaer);
+        void addGameObject(GameObject* g_object);
+        bool winCondition(bool(*func)(std::vector<GameObject*>*));
 
     private:
         bool m_running;
