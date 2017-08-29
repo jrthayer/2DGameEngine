@@ -24,5 +24,4 @@ class GameObject
         int m_x, m_y, m_w, m_h, m_row, m_col;
         std::string m_id;
 };
-
 #endif // GAMEOBJECT_H

@@ -33,9 +33,9 @@ INPUTS:
     const char* filename = filename/location of texture being loaded
 ===================================================================
 */
-void TextureManager::load(std::string id, const char* filename)
+void TextureManager::load(std::string id, const char *filename)
 {
-    SDL_Texture* texture = IMG_LoadTexture(m_renderer, filename);
+    SDL_Texture *texture = IMG_LoadTexture(m_renderer, filename);
 
     if(texture != NULL)
         m_game_textures[id] = texture;

@@ -20,7 +20,7 @@ class TextureManager
 {
     public:
         TextureManager();
-        void load(std::string id, const char* filename);
+        void load(std::string id, const char *filename);
         void draw(int x, int y, int w, int h, int row, int col,
                   std::string id, SDL_RendererFlip flip);
         void render();
@@ -29,8 +29,8 @@ class TextureManager
                       char* text);
         */
     private:
-        SDL_Window* m_window;
-        SDL_Renderer* m_renderer;
+        SDL_Window *m_window;
+        SDL_Renderer *m_renderer;
         std::map<std::string, SDL_Texture*> m_game_textures;
 };
 #endif // TEXTUREMANAGER_H
