@@ -5,8 +5,8 @@ DESCRIPTION
     Initializes member variables
 ===================================================================
 */
-GameObject::GameObject(int x, int y, std::string name)
-    : m_x(x), m_y(y), m_name(name)
+GameObject::GameObject(double x, double y, double w, double h, std::string name)
+    : m_x(x), m_y(y), m_w(w), m_h(h), m_name(name)
 {
 
 }

@@ -55,6 +55,11 @@ void GameEngine::addGameObject(GameObject* g_object)
     m_g_objects.push_back(g_object);
 }
 
+void GameEngine::loadTexture(std::string id, const char* file)
+{
+    m_t_manager.load(id,file);
+}
+
 bool GameEngine::winCondition(bool(*func)(std::vector<GameObject*>*))
 {
     if(func(&m_g_objects) == true)

@@ -1,10 +1,9 @@
 #include "gameUI.h"
 
-GameUI::GameUI(int x, int y, std::string name, SDL_Color color, int size,
-    std::string font_loc, char* text) : GameObject(x,y, name), m_size(size),
-    m_font_loc(font_loc), m_color(color), m_text(text)
+GameUI::GameUI(double x, double y, std::string name, SDL_Color color, int size,
+    char* text, std::string font_loc): GameObject(x,y,0,size,name),
+    m_size(size), m_font_loc(font_loc), m_color(color), m_text(text)
 {
-
 }
 
 /*

@@ -11,8 +11,8 @@
 class GameUI : public GameObject
 {
     public:
-        GameUI(int x, int y, std::string name, SDL_Color color, int size,
-            std::string font_loc, char* text);
+        GameUI(double x, double y, std::string name, SDL_Color color, int size,
+            char* text, std::string font_loc);
         void draw(TextureManager &t_manager);
 
     private:

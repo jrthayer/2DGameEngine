@@ -22,22 +22,26 @@ class GameObject
         void setUpdate(bool(*func)(GameObject&, std::vector<GameObject*>&, InputManager&));
 
         //getters
-        int getX(){return m_x;};
-        int getY(){return m_y;};
+        double getX(){return m_x;};
+        double getY(){return m_y;};
+        double getWidth(){return m_w;};
+        double getHeight(){return m_h;};
         std::string getName(){return m_name;};
-        int getStat(int index){return m_stats[index];};
+        double getStat(int index){return m_stats[index];};
+
 
         //setters
-        void setX(int x){m_x = x;};
-        void setY(int y){m_y = y;};
-        void setStat(int index, int value){m_stats[index] = value;};
+        void setX(double x){m_x = x;};
+        void setY(double y){m_y = y;};
+        void setStat(int index, double value){m_stats[index] = value;};
 
     protected:
-        GameObject(int x, int y, std::string name);
+        GameObject(double x, double y, double w, double h, std::string name);
         bool(*m_update)(GameObject&, std::vector<GameObject*>&, InputManager &i_manager) = NULL;
 
-        int m_x, m_y;
+        //m_w = width, m_h = height
+        double m_x, m_y, m_w, m_h;
         std::string m_name;
-        int m_stats[5] = {};
+        double m_stats[5] = {};
 };
 #endif // GAMEOBJECT_H

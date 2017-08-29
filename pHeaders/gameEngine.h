@@ -16,6 +16,7 @@ class GameEngine
         void update();
         void draw(TextureManager t_mangaer);
         void addGameObject(GameObject* g_object);
+        void loadTexture(std::string id, const char* file);
         bool winCondition(bool(*func)(std::vector<GameObject*>*));
 
     private:

@@ -1,8 +1,7 @@
 #include "gameMob.h"
 
-GameMob::GameMob(int x, int y, std::string name, int w, int h, int r, int c,
-    std::string id) : GameObject(x,y,name), m_w(w), m_h(h),
-    m_row(r), m_col(c), m_id(id)
+GameMob::GameMob(double x, double y, std::string name, double w, double h,
+    int r, int c) : GameObject(x,y,w,h,name), m_row(r), m_col(c)
 {
 
 }
@@ -22,6 +21,6 @@ NOTE: needs to be pass by reference since we need the game's
 void GameMob::draw(TextureManager &t_manager)
 {
     //flip option included for future feature, none by default
-    t_manager.draw(m_x, m_y, m_w, m_h, m_row, m_col, m_id, SDL_FLIP_NONE);
+    t_manager.draw(m_x, m_y, m_w, m_h, m_row, m_col, m_name, SDL_FLIP_NONE);
 }
 

@@ -32,14 +32,24 @@
 			<Add option="-Wall" />
 			<Add directory="C:/Users/James/Desktop/2DGameEngine/SDL2/include" />
 			<Add directory="C:/Users/James/Desktop/2DGameEngine/pHeaders" />
+			<Add directory="C:/Users/James/Desktop/2DGameEngine/pHeaders/gameObjects" />
 		</Compiler>
 		<Linker>
 			<Add option="-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer" />
 			<Add directory="C:/Users/James/Desktop/2DGameEngine/SDL2/lib" />
 		</Linker>
+		<Unit filename="pHeaders/collision.h" />
 		<Unit filename="pHeaders/gameEngine.h" />
+		<Unit filename="pHeaders/gameObject.h" />
+		<Unit filename="pHeaders/gameObjects/gameMob.h" />
+		<Unit filename="pHeaders/gameObjects/gameUI.h" />
+		<Unit filename="pHeaders/inputManager.h" />
 		<Unit filename="pHeaders/textureManager.h" />
 		<Unit filename="pSources/gameEngine.cpp" />
+		<Unit filename="pSources/gameObject.cpp" />
+		<Unit filename="pSources/gameObjects/gameMob.cpp" />
+		<Unit filename="pSources/gameObjects/gameUI.cpp" />
+		<Unit filename="pSources/inputManager.cpp" />
 		<Unit filename="pSources/main.cpp" />
 		<Unit filename="pSources/textureManager.cpp" />
 		<Extensions>

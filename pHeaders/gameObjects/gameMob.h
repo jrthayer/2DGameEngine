@@ -8,14 +8,14 @@
 class GameMob : public GameObject
 {
     public:
-        GameMob(int x, int y, std::string name, int w, int h, int r, int c,
-            std::string id);
+        GameMob(double x, double y, std::string name, double w, double h,
+            int r, int c);
         void draw(TextureManager &t_manager);
 
     private:
-        //m_w = width, m_h = height
-        int m_w, m_h, m_row, m_col;
-        std::string m_id;
+
+        int m_row, m_col;
+
 };
 
 #endif // GAMEMOB_H

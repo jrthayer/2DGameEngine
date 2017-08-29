@@ -60,7 +60,7 @@ INPUTS:
 ===================================================================
 */
 void TextureManager::draw(int x, int y, int w, int h, int row, int col,
-                          std::string id, SDL_RendererFlip flip)
+    std::string id, SDL_RendererFlip flip)
 {
     SDL_Rect src_rect;
     SDL_Rect dest_rect;
