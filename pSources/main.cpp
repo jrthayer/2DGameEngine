@@ -1,4 +1,6 @@
 #include "gameEngine.h"
+#include "gameState.h"
+#include "gameEngine.h"
 
 int main(int argc, char* argv[])
 {

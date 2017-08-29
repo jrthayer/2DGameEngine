@@ -62,8 +62,19 @@ DESCRIPTION
     go to after this one
 ===================================================================
 */
-void GameState::nextState(GameState* next)
+void GameState::setNextState(GameState* next)
 {
     m_next_state = next;
+}
+
+/*
+DESCRIPTION
+    Gets the member variable that identifies which GameState to
+    go to after this one
+===================================================================
+*/
+GameState* GameState::getNextState()
+{
+    return m_next_state;
 }
 

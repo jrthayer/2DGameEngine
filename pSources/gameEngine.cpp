@@ -12,10 +12,8 @@ void GameEngine::run()
 
     while(m_running)
     {
-        m_t_manager.render();
-        //call event handler
-        //call game handler
-            //call texture handler
+        update();
+        draw();
     }
 
     close();
@@ -28,4 +26,29 @@ void GameEngine::close()
     //destroy game handler
     //destroy texture handler
     SDL_Quit();
+}
+
+void GameEngine::update()
+{
+    std::vector<GameObject*>::iterator iter;
+
+    for(iter = m_g_objects.begin(); iter < m_g_objects.end(); iter++)
+    {
+        (*iter)->update();
+    }
+}
+
+void GameEngine::draw()
+{
+    std::vector<GameObject*>::iterator iter;
+
+    for(iter = m_g_objects.begin(); iter < m_g_objects.end(); iter++)
+    {
+        (*iter)->draw(t_manager);
+    }
+}
+
+void GameEngine::addGameState(GameState* g_object)
+{
+    m_g_objects.push_back(g_object);
 }

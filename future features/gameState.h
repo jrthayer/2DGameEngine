@@ -21,7 +21,8 @@ class GameState
         void addObject(GameObject *g_object);
         void draw(TextureManager &t_manager);
         void update();
-        void nextState(GameState* next);
+        void setNextState(GameState* next);
+        GameState* getNextState();
     private:
         std::vector<GameObject*> m_g_objects;
         GameState* m_next_state;

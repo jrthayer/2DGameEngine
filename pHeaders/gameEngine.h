@@ -3,7 +3,6 @@
 
 #include "textureManager.h"
 #include "gameObject.h"
-#include "gameState.h"
 
 #include <vector>
 
@@ -13,9 +12,12 @@ class GameEngine
         GameEngine();
         void run();
         void close();
+        void update();
+        void draw();
+        void addGameObject();
 
     private:
         bool m_running;
-        std::vector<GameState*> m_g_states;
+        std::vector<GameObject*> m_g_objects;
 };
 #endif // GAMEENGINE_H
