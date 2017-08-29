@@ -5,8 +5,8 @@ DESCRIPTION
     Initializes member variables
 ===================================================================
 */
-GameObject::GameObject(int x, int y)
-    : m_x(x), m_y(x)
+GameObject::GameObject(int x, int y, std::string name)
+    : m_x(x), m_y(y), m_name(name)
 {
 
 }
@@ -16,10 +16,11 @@ DESCRIPTION
     Runs the function passed in through setUpdate
 ===================================================================
 */
-void GameObject::update(GameObject *g, InputManager &i_manager)
+void GameObject::update(GameObject &g1, std::vector<GameObject*> &g2,
+    InputManager &i_manager)
 {
     if(m_update != NULL)
-        m_update(*g, i_manager);
+        m_update(g1, g2, i_manager);
 }
 
 /*
@@ -28,10 +29,10 @@ DESCRIPTION
     for user defined behavior to be programmed into the class
 ===================================================================
 INPUTS:
-    void(*func)() = function pointer to function defined by user
+    bool(*func)(GameObject&, std::vector<GameObject*>&, InputManager &i_manager) = function pointer to function defined by user
 ===================================================================
 */
-void GameObject::setUpdate(void(*func)(const GameObject&, InputManager &i_manager))
+void GameObject::setUpdate(bool(*func)(GameObject&, std::vector<GameObject*>&, InputManager &i_manager))
 {
     m_update = func;
 }

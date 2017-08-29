@@ -8,7 +8,7 @@
 class GameMob : public GameObject
 {
     public:
-        GameMob(int x, int y, int w, int h, int r, int c,
+        GameMob(int x, int y, std::string name, int w, int h, int r, int c,
             std::string id);
         void draw(TextureManager &t_manager);
 

@@ -1,7 +1,7 @@
 #include "gameMob.h"
 
-GameMob::GameMob(int x, int y, int w, int h, int r, int c,
-    std::string id) : GameObject(x,y), m_w(w), m_h(h),
+GameMob::GameMob(int x, int y, std::string name, int w, int h, int r, int c,
+    std::string id) : GameObject(x,y,name), m_w(w), m_h(h),
     m_row(r), m_col(c), m_id(id)
 {
 
