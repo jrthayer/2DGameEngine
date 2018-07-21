@@ -4,6 +4,9 @@
 #include "textureManager.h"
 #include "inputManager.h"
 #include "gameObject.h"
+#include "gameMob.h"
+#include "gameUI.h"
+#include "collision.h"
 
 #include <vector>
 

@@ -24,7 +24,7 @@ class TextureManager
         void draw(int x, int y, int w, int h, int row, int col,
             std::string id, SDL_RendererFlip flip);
         void drawText(int x, int y, SDL_Color c, int size,
-            std::string font_loc, char* text);
+            std::string font_loc, const char* text);
         void render();
 
     private:

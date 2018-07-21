@@ -90,7 +90,7 @@ INPUTS:
 ===================================================================
 */
 void TextureManager::drawText(int x, int y, SDL_Color c, int size,
-    std::string font_loc, char* text)
+    std::string font_loc, const char* text)
 {
     TTF_Font* f = TTF_OpenFont(font_loc.c_str(), size);
     SDL_Surface* message_surface = TTF_RenderText_Solid(f, text, c);

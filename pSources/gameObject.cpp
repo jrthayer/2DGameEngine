@@ -8,11 +8,11 @@ DESCRIPTION
 GameObject::GameObject(double x, double y, double w, double h, std::string name)
     : m_x(x), m_y(y), m_w(w), m_h(h), m_name(name)
 {
-
+    m_stats[0] = 0;
 }
 
 /*
-DESCRIPTION
+DESCRIPTION#include <cstring>
     Runs the function passed in through setUpdate
 ===================================================================
 */
@@ -36,3 +36,5 @@ void GameObject::setUpdate(bool(*func)(GameObject&, std::vector<GameObject*>&, I
 {
     m_update = func;
 }
+
+
